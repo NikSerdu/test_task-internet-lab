@@ -9,7 +9,7 @@ const Hero: FC = () => {
     >
       <div className="bg-primary absolute top-0 right-0 left-0 bottom-0 opacity-80 z-10"></div>
       <div className="relative z-20 text-white max-w-4xl mx-auto text-center">
-        <div className="">
+        <div className="max-md:-mt-32">
           <h1 className="">Говорят, никогда не поздно сменить профессию</h1>
           <p className="body-18">
             Сделай круто тестовое задание и у тебя получится
