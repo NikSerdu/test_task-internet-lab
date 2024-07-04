@@ -2,7 +2,7 @@ FROM node as development
 
 WORKDIR /usr/src/app
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install -g pnpm
 RUN pnpm install
 
@@ -12,7 +12,7 @@ RUN pnpm run build
 
 FROM nginx:stable-alpine as production
 
-COPY --from=development /usr/src/app/dist /usr/share/nginx/html
+COPY --from=development /usr/src/app/dist /usr/share/nginx/html/test_task-internet-lab
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
